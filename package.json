@@ -1,0 +1,30 @@
+{
+  "name": "@gagoar/mermaid-flowchart-parser",
+  "version": "0.1.0",
+  "description": "Dependency-free parser that recovers node ids and edges from Mermaid flowchart source, without pulling in mermaid's rendering pipeline.",
+  "keywords": ["mermaid", "flowchart", "parser", "ast"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagoar/mermaid-flowchart-parser.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^3.0.0"
+  }
+}
