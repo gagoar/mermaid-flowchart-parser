@@ -1,2 +1,5 @@
+# dist/ is committed (not ignored) so this package also works as a git-URL
+# dependency (npm clones the repo as-is; there's no build step for that path
+# without either committed output or a working `prepare` hook — this repo has
+# both, belt and suspenders).
 node_modules/
-dist/
